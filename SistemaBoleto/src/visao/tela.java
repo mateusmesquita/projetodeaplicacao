@@ -28,20 +28,35 @@ public class tela extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel10 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonCedente = new javax.swing.JButton();
+        jButtonSacado = new javax.swing.JButton();
+        jButtonSacadoAvalista = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
 
         jLabel10.setText("jLabel10");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Cedente");
+        jButtonCedente.setText("Cedente");
+        jButtonCedente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCedenteActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Sacado");
+        jButtonSacado.setText("Sacado");
+        jButtonSacado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSacadoActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Sacado Avalista");
+        jButtonSacadoAvalista.setText("Sacado Avalista");
+        jButtonSacadoAvalista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSacadoAvalistaActionPerformed(evt);
+            }
+        });
 
         jLabel11.setText("Clique em cada botao e preencha os campos corretamente.");
 
@@ -53,11 +68,11 @@ public class tela extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(jButton1)
+                        .addComponent(jButtonCedente)
                         .addGap(26, 26, 26)
-                        .addComponent(jButton2)
+                        .addComponent(jButtonSacado)
                         .addGap(27, 27, 27)
-                        .addComponent(jButton3))
+                        .addComponent(jButtonSacadoAvalista))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(64, 64, 64)
                         .addComponent(jLabel11)))
@@ -70,14 +85,29 @@ public class tela extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jButtonCedente)
+                    .addComponent(jButtonSacado)
+                    .addComponent(jButtonSacadoAvalista))
                 .addContainerGap(250, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonCedenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCedenteActionPerformed
+        new telaCedente().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonCedenteActionPerformed
+
+    private void jButtonSacadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSacadoActionPerformed
+        new telaSacado().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonSacadoActionPerformed
+
+    private void jButtonSacadoAvalistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSacadoAvalistaActionPerformed
+         new telaSacadoAvalista().setVisible(true);
+         this.dispose();
+    }//GEN-LAST:event_jButtonSacadoAvalistaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,9 +145,9 @@ public class tela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonCedente;
+    private javax.swing.JButton jButtonSacado;
+    private javax.swing.JButton jButtonSacadoAvalista;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
