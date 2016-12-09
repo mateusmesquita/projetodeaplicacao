@@ -10,10 +10,18 @@ package visao;
  * @author Carolina
  */
 public class telaSacado extends javax.swing.JFrame {
-
-    /**
-     * Creates new form telaSacado
-     */
+    
+    String Nome;
+    String CPF;
+    String Logradouro;
+    String Numero;
+    String UF;
+    String Bairro;
+    String CEP;
+    String Localidade;
+    
+    
+    
     public telaSacado() {
         initComponents();
     }
@@ -29,141 +37,151 @@ public class telaSacado extends javax.swing.JFrame {
 
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        NomeSacado = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        LogradouroSacado = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        NumeroSacado = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        UFSacado = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        CEPSacado = new javax.swing.JFormattedTextField();
         jLabel20 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        BairroSacado = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        LocalidadeSacado = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        CPFSacado = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jLabel14.setText("Sacado");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(150, 35, 35, 14);
 
         jLabel15.setText("Nome:");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(40, 70, 31, 14);
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        NomeSacado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                NomeSacadoActionPerformed(evt);
             }
         });
+        getContentPane().add(NomeSacado);
+        NomeSacado.setBounds(83, 55, 291, 30);
 
         jLabel16.setText("CPF:");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(42, 96, 23, 14);
 
         jLabel17.setText("Endereço:");
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(120, 120, 52, 14);
+        getContentPane().add(LogradouroSacado);
+        LogradouroSacado.setBounds(90, 150, 159, 20);
 
         jLabel21.setText("Nº");
+        getContentPane().add(jLabel21);
+        jLabel21.setBounds(260, 150, 12, 14);
 
-        jLabel18.setText("UF:");
-
-        jLabel19.setText("CEP:");
-
-        jFormattedTextField3.addActionListener(new java.awt.event.ActionListener() {
+        NumeroSacado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField3ActionPerformed(evt);
+                NumeroSacadoActionPerformed(evt);
             }
         });
+        getContentPane().add(NumeroSacado);
+        NumeroSacado.setBounds(280, 150, 22, 14);
+
+        jLabel18.setText("UF:");
+        getContentPane().add(jLabel18);
+        jLabel18.setBounds(310, 150, 17, 14);
+        getContentPane().add(UFSacado);
+        UFSacado.setBounds(330, 150, 40, 20);
+
+        jLabel19.setText("CEP:");
+        getContentPane().add(jLabel19);
+        jLabel19.setBounds(60, 180, 23, 14);
+
+        CEPSacado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CEPSacadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CEPSacado);
+        CEPSacado.setBounds(90, 180, 157, 20);
 
         jLabel20.setText("Bairro:");
+        getContentPane().add(jLabel20);
+        jLabel20.setBounds(260, 180, 32, 14);
+        getContentPane().add(BairroSacado);
+        BairroSacado.setBounds(300, 180, 85, 20);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(jLabel14))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel19)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(34, 34, 34)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel16)
-                                        .addComponent(jLabel15)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(21, 21, 21)
-                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel18)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(86, 86, 86)
-                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(157, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel14)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jFormattedTextField2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel18)
-                        .addComponent(jTextField8)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel21)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19)
-                    .addComponent(jLabel20)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(141, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(143, 143, 143)
-                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(143, Short.MAX_VALUE)))
-        );
+        jLabel1.setText("Logradouro:");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(20, 150, 70, 20);
+
+        jLabel2.setText("Localidade:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(30, 210, 60, 14);
+        getContentPane().add(LocalidadeSacado);
+        LocalidadeSacado.setBounds(90, 210, 160, 20);
+
+        jButton2.setText("Confirmar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(160, 250, 79, 23);
+
+        jButton1.setText("Voltar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(250, 250, 61, 23);
+        getContentPane().add(CPFSacado);
+        CPFSacado.setBounds(90, 90, 140, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void NomeSacadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeSacadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_NomeSacadoActionPerformed
 
-    private void jFormattedTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField3ActionPerformed
+    private void CEPSacadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CEPSacadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField3ActionPerformed
+    }//GEN-LAST:event_CEPSacadoActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+           Nome = NomeSacado.getText();
+           CPF = CPFSacado.getText();
+           Logradouro = LogradouroSacado.getText();
+           Numero = NumeroSacado.getText();
+           UF = UFSacado.getText();
+           CEP = CEPSacado.getText();
+           Bairro = BairroSacado.getText();
+           Localidade = LocalidadeSacado.getText();
+           
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void NumeroSacadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroSacadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumeroSacadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,20 +219,25 @@ public class telaSacado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField jFormattedTextField2;
-    private javax.swing.JFormattedTextField jFormattedTextField3;
+    private javax.swing.JTextField BairroSacado;
+    private javax.swing.JFormattedTextField CEPSacado;
+    private javax.swing.JTextField CPFSacado;
+    private javax.swing.JTextField LocalidadeSacado;
+    private javax.swing.JTextField LogradouroSacado;
+    private javax.swing.JTextField NomeSacado;
+    private javax.swing.JTextField NumeroSacado;
+    private javax.swing.JTextField UFSacado;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
