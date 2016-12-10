@@ -10,10 +10,20 @@ package visao;
  * @author Carolina
  */
 public class telaDadosDoTitulo extends javax.swing.JFrame {
-
-    /**
-     * Creates new form telaDadosDoTitulo
-     */
+        String NumeroDoDocumento; 
+        String NossoNumero;
+        String DataDoDocumento;
+        String TipoDoDocumento;
+        String Desconto;
+        String Mora;
+        String DigitoDoNossoNumero;
+        String DataDoVencimento;
+        String Aceite;
+        String Deducao;
+        String Valor;
+        String ValorCobrado;
+        String Acrescimo;
+        
     public telaDadosDoTitulo() {
         initComponents();
     }
@@ -41,20 +51,21 @@ public class telaDadosDoTitulo extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        NumeroDoDocumentoTitulo = new javax.swing.JTextField();
+        NossoNumeroTitulo = new javax.swing.JTextField();
+        DigitoDoNossoNumeroTitulo = new javax.swing.JTextField();
+        ValorTitulo = new javax.swing.JTextField();
+        TipoDoDocumentoTitulo = new javax.swing.JTextField();
+        AceiteTitulo = new javax.swing.JTextField();
+        DescontoTitulo = new javax.swing.JTextField();
+        DeducaoTitulo = new javax.swing.JTextField();
+        MoraTitulo = new javax.swing.JTextField();
+        ValorCobradoTitulo = new javax.swing.JTextField();
+        AcrescimoTitulo = new javax.swing.JTextField();
+        DataDoDocumentoTitulo = new javax.swing.JFormattedTextField();
+        DataDoVencimentoTitulo = new javax.swing.JFormattedTextField();
         Voltar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -115,49 +126,49 @@ public class telaDadosDoTitulo extends javax.swing.JFrame {
         getContentPane().add(jLabel14);
         jLabel14.setBounds(450, 130, 90, 14);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        NumeroDoDocumentoTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                NumeroDoDocumentoTituloActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(60, 50, 115, 20);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(60, 90, 115, 20);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(200, 90, 60, 20);
+        getContentPane().add(NumeroDoDocumentoTitulo);
+        NumeroDoDocumentoTitulo.setBounds(60, 50, 115, 20);
+        getContentPane().add(NossoNumeroTitulo);
+        NossoNumeroTitulo.setBounds(60, 90, 115, 20);
+        getContentPane().add(DigitoDoNossoNumeroTitulo);
+        DigitoDoNossoNumeroTitulo.setBounds(200, 90, 60, 20);
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        ValorTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                ValorTituloActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(440, 100, 96, 20);
+        getContentPane().add(ValorTitulo);
+        ValorTitulo.setBounds(440, 100, 96, 20);
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        TipoDoDocumentoTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                TipoDoDocumentoTituloActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(60, 170, 114, 20);
-        getContentPane().add(jTextField8);
-        jTextField8.setBounds(180, 170, 120, 20);
-        getContentPane().add(jTextField9);
-        jTextField9.setBounds(70, 250, 96, 20);
-        getContentPane().add(jTextField10);
-        jTextField10.setBounds(180, 250, 96, 20);
-        getContentPane().add(jTextField11);
-        jTextField11.setBounds(70, 300, 96, 20);
-        getContentPane().add(jTextField12);
-        jTextField12.setBounds(440, 150, 96, 20);
-        getContentPane().add(jTextField13);
-        jTextField13.setBounds(445, 197, 96, 20);
-        getContentPane().add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(60, 130, 113, 20);
-        getContentPane().add(jFormattedTextField2);
-        jFormattedTextField2.setBounds(180, 130, 116, 20);
+        getContentPane().add(TipoDoDocumentoTitulo);
+        TipoDoDocumentoTitulo.setBounds(60, 170, 114, 20);
+        getContentPane().add(AceiteTitulo);
+        AceiteTitulo.setBounds(190, 170, 120, 20);
+        getContentPane().add(DescontoTitulo);
+        DescontoTitulo.setBounds(70, 250, 96, 20);
+        getContentPane().add(DeducaoTitulo);
+        DeducaoTitulo.setBounds(180, 250, 96, 20);
+        getContentPane().add(MoraTitulo);
+        MoraTitulo.setBounds(70, 300, 96, 20);
+        getContentPane().add(ValorCobradoTitulo);
+        ValorCobradoTitulo.setBounds(440, 150, 96, 20);
+        getContentPane().add(AcrescimoTitulo);
+        AcrescimoTitulo.setBounds(445, 197, 96, 20);
+        getContentPane().add(DataDoDocumentoTitulo);
+        DataDoDocumentoTitulo.setBounds(60, 130, 113, 20);
+        getContentPane().add(DataDoVencimentoTitulo);
+        DataDoVencimentoTitulo.setBounds(180, 130, 116, 20);
 
         Voltar.setText("Voltar");
         Voltar.addActionListener(new java.awt.event.ActionListener() {
@@ -166,27 +177,56 @@ public class telaDadosDoTitulo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Voltar);
-        Voltar.setBounds(320, 300, 70, 23);
+        Voltar.setBounds(410, 300, 70, 23);
+
+        jButton1.setText("Confirmar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(313, 300, 90, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void NumeroDoDocumentoTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumeroDoDocumentoTituloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_NumeroDoDocumentoTituloActionPerformed
 
     private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
-       new telaPrincipal().setVisible(true);
+      
          this.dispose();
     }//GEN-LAST:event_VoltarActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void TipoDoDocumentoTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TipoDoDocumentoTituloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_TipoDoDocumentoTituloActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void ValorTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValorTituloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_ValorTituloActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        NumeroDoDocumento = NumeroDoDocumentoTitulo.getText();
+        NossoNumero = NossoNumeroTitulo.getText();
+        DigitoDoNossoNumero = DigitoDoNossoNumeroTitulo.getText();
+        DataDoDocumento = DataDoDocumentoTitulo.getText();
+        DataDoVencimento = DataDoVencimentoTitulo.getText();
+        TipoDoDocumento = TipoDoDocumentoTitulo.getText();
+        Aceite = AceiteTitulo.getText();
+        Desconto = DescontoTitulo.getText();
+        Deducao = DeducaoTitulo.getText();
+        Mora = MoraTitulo.getText();
+        Valor = ValorTitulo.getText();
+        ValorCobrado=ValorCobradoTitulo.getText();
+        Acrescimo=AcrescimoTitulo.getText();
+       
+                
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,9 +264,21 @@ public class telaDadosDoTitulo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AceiteTitulo;
+    private javax.swing.JTextField AcrescimoTitulo;
+    private javax.swing.JFormattedTextField DataDoDocumentoTitulo;
+    private javax.swing.JFormattedTextField DataDoVencimentoTitulo;
+    private javax.swing.JTextField DeducaoTitulo;
+    private javax.swing.JTextField DescontoTitulo;
+    private javax.swing.JTextField DigitoDoNossoNumeroTitulo;
+    private javax.swing.JTextField MoraTitulo;
+    private javax.swing.JTextField NossoNumeroTitulo;
+    private javax.swing.JTextField NumeroDoDocumentoTitulo;
+    private javax.swing.JTextField TipoDoDocumentoTitulo;
+    private javax.swing.JTextField ValorCobradoTitulo;
+    private javax.swing.JTextField ValorTitulo;
     private javax.swing.JButton Voltar;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -241,16 +293,5 @@ public class telaDadosDoTitulo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

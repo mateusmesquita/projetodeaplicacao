@@ -119,10 +119,6 @@ public class telaPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(GeradorDeBoletoLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cedente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -130,13 +126,21 @@ public class telaPrincipal extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(sacadoAvalista)
-                    .addComponent(dadosDoTitulo)
-                    .addComponent(gerarBoleto, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dadosDoTitulo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(dadosDoBoleto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(contaBancaria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(GeradorDeBoletoLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(gerarBoleto, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,9 +157,9 @@ public class telaPrincipal extends javax.swing.JFrame {
                     .addComponent(dadosDoBoleto)
                     .addComponent(sacado)
                     .addComponent(dadosDoTitulo))
-                .addGap(31, 31, 31)
+                .addGap(38, 38, 38)
                 .addComponent(gerarBoleto)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -192,12 +196,246 @@ public class telaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_dadosDoBoletoActionPerformed
 
     private void gerarBoletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerarBoletoActionPerformed
+        try{
+        
         Cedente cedente = new Cedente(telaCedente.NomeDaEmpresa, telaCedente.CNPJEmpresa);
         
         Sacado sacado = new Sacado(telaSacado.Nome, telaSacado.CPF);
+        Endereco enderecoSacado = new Endereco();
+        
+        enderecoSacado.setLocalidade(telaSacado.Localidade);
+        enderecoSacado.setCep(new CEP(telaSacado.CEP));
+        enderecoSacado.setBairro(telaSacado.Bairro);
+        enderecoSacado.setLogradouro(telaSacado.Logradouro);
+        enderecoSacado.setNumero(telaSacado.Numero);
+         switch (telaSacado.UF){
+        
+            case "AC": enderecoSacado.setUF(UnidadeFederativa.AC); 
+            break;
+            case "AL": enderecoSacado.setUF(UnidadeFederativa.AL);
+            break;
+            case "AP": enderecoSacado.setUF(UnidadeFederativa.AP);
+            break;
+            case "AM": enderecoSacado.setUF(UnidadeFederativa.AM); 
+            break;  
+            case "BA": enderecoSacado.setUF(UnidadeFederativa.BA);
+            break;
+            case "CE": enderecoSacado.setUF(UnidadeFederativa.CE); 
+            break;
+            case "DF": enderecoSacado.setUF(UnidadeFederativa.DF);
+            break;
+            case "ES": enderecoSacado.setUF(UnidadeFederativa.ES); 
+            break;
+            case "GO": enderecoSacado.setUF(UnidadeFederativa.GO);
+            break;
+            case "MT": enderecoSacado.setUF(UnidadeFederativa.MT); 
+            break;
+            case "MS": enderecoSacado.setUF(UnidadeFederativa.MS); 
+            break;
+            case "MG": enderecoSacado.setUF(UnidadeFederativa.MG); 
+            break;
+            case "PA": enderecoSacado.setUF(UnidadeFederativa.PA); 
+            break;
+            case "PB": enderecoSacado.setUF(UnidadeFederativa.PB); 
+            break;            
+            case "PR": enderecoSacado.setUF(UnidadeFederativa.PR); 
+            break;
+            case "PE": enderecoSacado.setUF(UnidadeFederativa.PE); 
+            break;
+            case "PI": enderecoSacado.setUF(UnidadeFederativa.PI); 
+            break;
+            case "RJ": enderecoSacado.setUF(UnidadeFederativa.RJ); 
+            break;
+            case "RN": enderecoSacado.setUF(UnidadeFederativa.RN); 
+            break;
+            case "RS": enderecoSacado.setUF(UnidadeFederativa.RS); 
+            break;
+            case "RO": enderecoSacado.setUF(UnidadeFederativa.RO); 
+            break;
+            case "RR": enderecoSacado.setUF(UnidadeFederativa.RR); 
+            break;
+            case "SC": enderecoSacado.setUF(UnidadeFederativa.SC); 
+            break;
+            case "SP": enderecoSacado.setUF(UnidadeFederativa.SP); 
+            break;
+            case "SE": enderecoSacado.setUF(UnidadeFederativa.SE);
+            break;
+            case "TO": enderecoSacado.setUF(UnidadeFederativa.TO);
+            break;
+
+        }      
+        sacado.addEndereco(enderecoSacado);
+        
+        SacadorAvalista sacadorAvalista = new SacadorAvalista(telaSacadoAvalista.Nome, telaSacadoAvalista.CPF);
+        Endereco enderecoSacadoAvalista = new Endereco();
+        
+        enderecoSacadoAvalista.setLocalidade(telaSacadoAvalista.Localidade);
+        enderecoSacadoAvalista.setCep(new CEP(telaSacadoAvalista.CEP));
+        enderecoSacadoAvalista.setBairro(telaSacadoAvalista.Bairro);
+        enderecoSacadoAvalista.setLogradouro(telaSacadoAvalista.Logradouro);
+        enderecoSacadoAvalista.setNumero(telaSacadoAvalista.Numero);
+        switch (telaSacadoAvalista.UF){
+        
+            case "AC": enderecoSacadoAvalista.setUF(UnidadeFederativa.AC); 
+            break;
+            case "AL": enderecoSacadoAvalista.setUF(UnidadeFederativa.AL);
+            break;
+            case "AP": enderecoSacadoAvalista.setUF(UnidadeFederativa.AP);
+            break;
+            case "AM": enderecoSacadoAvalista.setUF(UnidadeFederativa.AM); 
+            break;  
+            case "BA": enderecoSacadoAvalista.setUF(UnidadeFederativa.BA);
+            break;
+            case "CE": enderecoSacadoAvalista.setUF(UnidadeFederativa.CE); 
+            break;
+            case "DF": enderecoSacadoAvalista.setUF(UnidadeFederativa.DF);
+            break;
+            case "ES": enderecoSacadoAvalista.setUF(UnidadeFederativa.ES); 
+            break;
+            case "GO": enderecoSacadoAvalista.setUF(UnidadeFederativa.GO);
+            break;
+            case "MT": enderecoSacadoAvalista.setUF(UnidadeFederativa.MT); 
+            break;
+            case "MS": enderecoSacadoAvalista.setUF(UnidadeFederativa.MS); 
+            break;
+            case "MG": enderecoSacadoAvalista.setUF(UnidadeFederativa.MG); 
+            break;
+            case "PA": enderecoSacadoAvalista.setUF(UnidadeFederativa.PA); 
+            break;
+            case "PB": enderecoSacadoAvalista.setUF(UnidadeFederativa.PB); 
+            break;            
+            case "PR": enderecoSacadoAvalista.setUF(UnidadeFederativa.PR); 
+            break;
+            case "PE": enderecoSacadoAvalista.setUF(UnidadeFederativa.PE); 
+            break;
+            case "PI": enderecoSacadoAvalista.setUF(UnidadeFederativa.PI); 
+            break;
+            case "RJ": enderecoSacadoAvalista.setUF(UnidadeFederativa.RJ); 
+            break;
+            case "RN": enderecoSacadoAvalista.setUF(UnidadeFederativa.RN); 
+            break;
+            case "RS": enderecoSacadoAvalista.setUF(UnidadeFederativa.RS); 
+            break;
+            case "RO": enderecoSacadoAvalista.setUF(UnidadeFederativa.RO); 
+            break;
+            case "RR": enderecoSacadoAvalista.setUF(UnidadeFederativa.RR); 
+            break;
+            case "SC": enderecoSacadoAvalista.setUF(UnidadeFederativa.SC); 
+            break;
+            case "SP": enderecoSacadoAvalista.setUF(UnidadeFederativa.SP); 
+            break;
+            case "SE": enderecoSacadoAvalista.setUF(UnidadeFederativa.SE);
+            break;
+            case "TO": enderecoSacadoAvalista.setUF(UnidadeFederativa.TO);
+            break;
+
+        }
+        sacadorAvalista.addEndereco(enderecoSacado);
+              
+        ContaBancaria contaBancaria = new ContaBancaria(BancosSuportados.BANCO_BRADESCO.create());
+        int ContaNum = Integer.parseInt(telaContaBancaria.NumeroConta);
+        contaBancaria.setNumeroDaConta(new NumeroDaConta(ContaNum, "0"));
+        int TipoCarteira = Integer.parseInt(telaContaBancaria.TipoDeCarteira);
+        contaBancaria.setCarteira(new Carteira(TipoCarteira));
+        int AgenciaNum = Integer.parseInt(telaContaBancaria.AgenciaNumero);
+        contaBancaria.setAgencia(new Agencia(AgenciaNum, "1"));
+       
+        Titulo titulo = new Titulo(contaBancaria, sacado, cedente, sacadorAvalista);
+        titulo.setNumeroDoDocumento(telaDadosDoTitulo.NumeroDoDocumento);
+        titulo.setNossoNumero(telaDadosDoTitulo.NossoNumero);
+        titulo.setDigitoDoNossoNumero(telaDadosDoTitulo.DigitoDoNossoNumero);
+        titulo.setValor(new BigDecimal(telaDadosDoTitulo.Valor));
+        titulo.setDataDoDocumento(new Date());
+        titulo.setDataDoVencimento(new Date());
+        switch (telaDadosDoTitulo.TipoDoDocumento){
+            
+            case "CH":titulo.setTipoDeDocumento(TipoDeTitulo.CH_CHEQUE);
+            break;
+            case "DM":titulo.setTipoDeDocumento(TipoDeTitulo.DM_DUPLICATA_MERCANTIL);
+            break;
+            case "DMI":titulo.setTipoDeDocumento(TipoDeTitulo.DMI_DUPLICATA_MERCANTIL_PARA_INDICACAO);
+            break;
+            case "DS":titulo.setTipoDeDocumento(TipoDeTitulo.DS_DUPLICATA_DE_SERVICO);
+            break;
+            case "DSI":titulo.setTipoDeDocumento(TipoDeTitulo.DSI_DUPLICATA_DE_SERVICO_PARA_INDICACAO);
+            break;
+            case "DR":titulo.setTipoDeDocumento(TipoDeTitulo.DR_DUPLICATA_RURAL);
+            break;
+            case "LC":titulo.setTipoDeDocumento(TipoDeTitulo.LC_LETRA_DE_CAMBIO);
+            break;
+            case "NCC":titulo.setTipoDeDocumento(TipoDeTitulo.NCC_NOTA_DE_CREDITO_COMERCIAL);
+            break;
+            case "NCE":titulo.setTipoDeDocumento(TipoDeTitulo.NCE_NOTA_DE_CREDITO_A_EXPORTACAO);
+            break;
+            case "NCI":titulo.setTipoDeDocumento(TipoDeTitulo.NCI_NOTA_DE_CREDITO_INDUSTRIAL);
+            break;
+            case "NCR":titulo.setTipoDeDocumento(TipoDeTitulo.NCR_NOTA_DE_CREDITO_RURAL);
+            break;
+            case "NP":titulo.setTipoDeDocumento(TipoDeTitulo.NP_NOTA_PROMISSORIA);
+            break;
+            case "NPR":titulo.setTipoDeDocumento(TipoDeTitulo.NPR_NOTA_PROMISSORIA_RURAL);
+            break;
+            case "TM":titulo.setTipoDeDocumento(TipoDeTitulo.TM_TRIPLICATA_MERCANTIL);
+            break;
+            case "TS":titulo.setTipoDeDocumento(TipoDeTitulo.TS_TRIPLICATA_DE_SERVICO);
+            break;
+            case "RC":titulo.setTipoDeDocumento(TipoDeTitulo.RC_RECIBO);
+            break;
+            case "FAT":titulo.setTipoDeDocumento(TipoDeTitulo.FAT_FATURA);
+            break;
+            case "ND":titulo.setTipoDeDocumento(TipoDeTitulo.ND_NOTA_DE_DEBITO);
+            break;
+            case "AP":titulo.setTipoDeDocumento(TipoDeTitulo.AP_APOLICE_DE_SEGURO);
+            break;
+            case "ME":titulo.setTipoDeDocumento(TipoDeTitulo.ME_MENSALIDADE_ESCOLAR);
+            break;
+            case "PC":titulo.setTipoDeDocumento(TipoDeTitulo.PC_PARCELA_DE_CONSORCIO);
+            break;
+            case "NF":titulo.setTipoDeDocumento(TipoDeTitulo.DD_DOCUMENTO_DE_DIVIDA);
+            break;
+            case "DD":titulo.setTipoDeDocumento(TipoDeTitulo.NF_NOTA_FISCAL);
+            break;
+            case "CPR":titulo.setTipoDeDocumento(TipoDeTitulo.CEDULA_DE_PRODUTO_RURAL);
+            break;
+            case "DAE":titulo.setTipoDeDocumento(TipoDeTitulo.DIVIDA_ATIVA_DE_ESTADO);
+            break;
+            case "DAM":titulo.setTipoDeDocumento(TipoDeTitulo.DIVIDA_ATIVA_DE_MUNICIPIO);
+            break;
+            case "DAU":titulo.setTipoDeDocumento(TipoDeTitulo.DIVIDA_ATIVA_DA_UNIAO);   
+            break;
+            case "CC":titulo.setTipoDeDocumento(TipoDeTitulo.COTA_CONDOMINIAL);
+            break;
+            case "OT":titulo.setTipoDeDocumento(TipoDeTitulo.OUTROS);
+            break;
+            
+        }
+        titulo.setDesconto(new BigDecimal(telaDadosDoTitulo.Desconto));
+        titulo.setDeducao(BigDecimal.ZERO);
+        titulo.setMora(BigDecimal.ZERO);
+        titulo.setAcrecimo(BigDecimal.ZERO);
+        titulo.setValorCobrado(BigDecimal.ZERO);
         
         
+        Boleto boleto = new Boleto(titulo);
+                
+        boleto.setLocalPagamento(telaDadosDoBoleto.LocalDePagamento);
+        boleto.setInstrucaoAoSacado(telaDadosDoBoleto.InstrucaoSacado);
+        boleto.setInstrucao1(telaDadosDoBoleto.Instrucao1);
+        boleto.setInstrucao2(telaDadosDoBoleto.Instrucao2);
+        boleto.setInstrucao3(telaDadosDoBoleto.Instrucao3);
+        boleto.setInstrucao4(telaDadosDoBoleto.Instrucao4);
+        boleto.setInstrucao5(telaDadosDoBoleto.Instrucao5);
+        boleto.setInstrucao6(telaDadosDoBoleto.Instrucao6);
+        boleto.setInstrucao7(telaDadosDoBoleto.Instrucao7);
+        boleto.setInstrucao8(telaDadosDoBoleto.Instrucao8);   
+         BoletoViewer boletoViewer = new BoletoViewer(boleto);
+        File arquivoPdf = boletoViewer.getPdfAsFile("MeuPrimeiroBoleto.pdf");
         
+        mostreBoletoNaTela(arquivoPdf);
+        }
+        catch(IllegalArgumentException e){
+            JOptionPane.showMessageDialog(null, "Algum campo não foi preenchido corretamente.", "ERRO OCORRIDO ", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_gerarBoletoActionPerformed
         
     
